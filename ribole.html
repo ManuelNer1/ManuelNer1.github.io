@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ribole</title>
+
+                <!-- IMPORTANTE 
+                1.-Modificar el favicon de esta manera, img/nombredelaimagen.png
+                el "img" es porque se encuentra en otra carpeta llamada img-->
+            <link rel="shortcut icon" href="img/ribole.jpg" type="image/x-icon">
+            <link rel="stylesheet" href="estilos.css">
+
+                    <!-- FIREBASE       -->
+                    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+                    <!-- GOOGLE MAPS    -->
+                <script scr="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL63WEg7R98C5567DCBfGZhNm-JYKnUfU"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="employer.html">Servicio</a>
+            <a href="#">Contacto</a>
+        </nav>
+            <section class="textos-header">
+                <h1>Tulopides</h1>
+                <h2>Todos tus mandados a un solo click</h2>
+            </section>
+
+        <!-- FUENTE: 
+            https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+        <div 
+            class="wave" 
+            style="height: 150px; overflow: hidden;" >
+
+            <svg 
+                viewBox="0 0 500 150" 
+                preserveAspectRatio="none" 
+                style="height: 100%; width: 100%;">
+
+                <path 
+                    d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" 
+                    style="stroke: none; fill: #fff;">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Menu</h2>
+                <!--AQUI VA EL MENU-->
+                    <img src="img/menu_ribole1.jpg">
+                    <img src="img/menu_ribole2.jpg">
+
+                        <h1 class="title">Pedido</h1>
+                        <div class="container">
+
+                            <div class="carta">
+                                <img src="img/nota.png">
+                                    <h4>Pedido</h4>
+                                    <p>Ingresa lo que deceas ordenar </p>
+                            </div>
+
+                            <div class="carta">
+                                <img src="img/celular.jpg">
+                                    <h4>Celular</h4>
+                                    <p>Proporcionanos tu numero de celular para poder contactarte</p>
+                            </div>
+
+                            <div class="carta">
+                                <img src="img/maps.png">
+                                    <h4>Maps</h4>
+                                    <p>Compartenos tu ubicacion para poder llegar a ti</p>
+                            </div>
+                        </div>
+                        
+            </div>
+        </section>
+ 
+        <div class="l-form" >
+            <form action="" class="form">
+                <h1 class="form_title">¿Que deseas ordenar?</h1>
+
+                    <div class="form_div">
+                        <input type="text" class="form_input" placeholder="" id="pedidomamon">
+                            <label for="" class="form_label">Orden</label>
+                    </div>
+
+                    <div class="form_div">
+                        <input type="number" class="form_input" placeholder="" id="cel">
+                            <label for="" class="form_label">Celular</label>
+                    </div>
+
+            </form>
+        </div>
+
+    <BUtton class="btn" onclick="findMe()">Buscar mi ubicacion</BUtton>
+    <button class="btn" onclick="shareMe()" >confirmar pedido</button>
+    <div id="map"></div>
+
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Phone</h4>
+                <p>1234567</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>kk@gmail</p>
+            </div>
+            <div class="content-foo">
+                <h4>location</h4>
+                <p>Tula</p>
+            </div>
+        </div>
+        <h2 class="Tiulo-final">&copy; Tulopides</h2>
+    </footer>
+    <script>var empresa = "Ribole";</script>
+    <script src='app.js'>
+    </script>
+</body>
+</html>

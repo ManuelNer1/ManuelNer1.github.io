@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Login Employer</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Ingresa tu usuario y tu contraseña</h3>
+    <input type="email" placeholder="Correo electronico..." id="email_field" />
+    <input type="password" placeholder="Contraseña..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+    <script>
+        dataRef.once('value', snapshot => {
+        console.log(snapshot.val());
+      });
+    </script>
+    
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCfji_zAhD_qE3T854-HXPBdlAAtIG3fGA",
+      authDomain: "dbtula13.firebaseapp.com",
+      projectId: "dbtula13",
+      storageBucket: "dbtula13.appspot.com",
+      messagingSenderId: "696242519810",
+      appId: "1:696242519810:web:e8c7b9f19658bbc3bccc1b"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>

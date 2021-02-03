@@ -1,0 +1,647 @@
+/*Aqui vamos a modificar la parte superior de mi pag web*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Cambia la letra de la parte superior de la pag web*/
+
+body{
+    font-family: 'open sans';
+}
+
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #6a6a6a;
+    margin-top: 100px;
+    font-weight: 100;
+
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+
+.container .carta{
+    width: 250px;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: 0 2px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: #BFC9CA;
+;
+}
+
+.container .carta:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 17px 16px rgba(0, 0, 0, .5);
+   
+}
+
+.container .carta img{
+    width: 180px;
+    height: 180px;
+}
+
+.container .carta h4{
+    font-weight: 600;
+}
+
+.container .carta p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.btn{
+    display: block;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgb(0, 141, 235);
+    background-color: #ffffff;
+    border-radius: 6px;
+    color: rgb(0, 141, 235);
+    cursor: pointer;
+    margin: 100px auto;
+    transition: all .25s;
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: -450px;
+    margin-bottom: 300px;
+    margin-right: 400px;
+  
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right,rgb(23, 228, 243), rgb(0, 141, 235));
+    transition: all .25s;
+    z-index: -1;
+}
+
+.btn:hover{
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.btn:hover::before{
+    height: 100%;;
+}
+
+:root{
+    --first-color: #1a73e8;
+    --input-color: #80868b;
+    --border-color: #dadce0;
+
+    --body-font: 'open-sans'
+    --normal-font-size:1rem;
+    --small-font-size: .75rem;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 0;
+}
+
+.l-form{
+    display: flex;
+    height: 100vh;
+}
+
+.form{
+    width: 360px;
+    height: 360px;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    margin-top: 90px;
+    margin-left: 400px;
+
+}
+
+.form_title{
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.form_div{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.form_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+
+.form_label{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    color: var(--input-color);
+    font-size: var(--normal-font-size);
+    transition: .3s;
+}
+
+.form_buttom{
+    display: block;
+    margin-left: auto;
+    padding: .75rem 2rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+
+}
+
+.form_input:focus + .form_label{
+    top: -.5rem;
+    left: .8rem ;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form_input:not(:placeholder-shown).form_input:not(:focus)+ .form_label{
+    top: -.5rem;
+    left: .8rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form_input:focus{
+    border: 1.5px solid var(--first-color);
+}
+
+.map{
+    margin: 20px;
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Esto es para agregar un espacio entre secciones*/
+.contenedor{
+    padding: 60px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Titulo{
+    font-size: 50px;
+    text-align: center;
+    height: 100px;
+}
+.titulo{
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #f12711;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(41, 92%, 53%, 0.548), hsla(6, 89%, 51%, 0.39)), url(img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(41, 92%, 53%, 0.548), hsla(6, 89%, 51%, 0.39)), url(img/portada.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+nav{
+    text-align: right;
+    padding: 60px 50px 0 0;
+}
+
+nav > a{
+    color: #ffff;
+    font-weight: 300;           /*Vuelve la letra mas ligera*/
+    text-decoration: none;      /*Le quita el subrayado*/
+    margin-right: 10px;         /*me separa cada palabra una de otra*/
+}
+
+nav > a:hover{
+    text-decoration: underline;      /*hace que cuando selecciones una letra, esta tenga subrayado*/
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About us*/
+    .contenedor-sobre-nosotros{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .imagen-about-us{
+        width: 48%;
+    }
+    .sobre-nosotros .conrtenido-textos{
+        width: 48%;
+    }
+
+    /* Haces que los numeros tengan una bolita*/
+    .contenido-textos h3{
+        margin-bottom: 15px;
+    }
+    .contenido-textos h3 span{
+        background: #4d0686;
+        color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+        margin-right: 5px;
+    }
+
+    .contenido-textos p{
+        padding: 0px 0px 30px 15px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    /*Galeria*/
+    .portafolio{
+        background: #f2f2f2;
+    }
+    
+    .galeria-port{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .imagen-port{
+        width: 24%;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    }
+    
+    .imagen-port > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .hover-galeria{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: scale(0);
+        background: hsla(273,91%,27%, 0.7);
+        transition: transform .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .hover-galeria img{
+        width: 50px;
+    }
+    
+    .hover-galeria p{
+        color: #fff;
+    }
+
+    .imagen-port:hover .hover-galeria{
+        transform: scale(1);
+    }
+
+    /* Clientes */
+    .cards{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .cards .card{
+        background: #4d0686;
+        display: flex;
+        width: 46%;
+        height: 200px;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    }
+    
+    .cards .card img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        display: block;
+    }
+    
+    .cards .card > .contenido-texto-card{
+        width: 60%;
+        color: #fff;
+    }
+    
+    .cards .card > .contenido-texto-card p{
+        font-weight: 3000;
+        padding-top: 10px;
+    }
+    
+    /*  Our team */
+    
+    .about-services{
+        background: #f2f2f2;
+        padding-bottom: 30px;
+    }
+    
+    
+    .servicio-cont{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .servicio-ind{
+        width: 28%;
+        text-align: center;
+    }
+    
+    .servicio-ind img{
+        width: 90%;
+    }
+    
+    .servicio-ind h3{
+        margin: 10px 0;
+    }
+    
+    .servicio-ind p{
+        font-weight: 300;
+        text-align: justify;
+    }
+    
+    /* footer */
+    
+    footer{
+        background: #414141;
+        padding: 60px 0 30px 0;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .contenedor-footer{
+        display: flex;
+        width: 90%;
+        justify-content: space-evenly;
+        margin: auto;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .content-foo{
+        text-align: center;
+    }
+    
+    .content-foo h4{
+        color: #fff;
+        border-bottom: 3px solid #af20d3;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .content-foo p{
+        color: #ccc;
+    }
+    
+    .titulo-final{
+        text-align: center;
+        font-size: 24px;
+        margin: 20px 0 0 0;
+        color: #9e9797;
+    }
+
+
+    
+    @media screen and (max-width:900px){
+        header{
+            background-position: center;
+        }
+    
+        .contenedor-sobre-nosotros{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .sobre-nosotros .contenido-textos{
+            width: 90%;
+        }
+    
+        .imagen-about-us{
+            width: 90%;
+        }
+    
+        /* Galeria */
+    
+        .imagen-port{
+            width: 44%;
+        }
+    
+        /* Clientes */
+    
+        .cards{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .cards .card{
+            width: 900%;
+        }
+    
+        .cards .card:first-child{
+            margin-bottom: 30px;
+        }
+    
+        /* servicios */
+    
+        .servicio-cont{
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .servicio-ind{
+            width: 100%;
+            text-align: center;
+        }
+    
+        .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+            margin-bottom: 60px;
+        }
+    
+        .servicio-ind img{
+            width: 90%;
+        }
+    }
+    
+    @media screen and (max-width:500px){
+        nav{
+            text-align: center;
+            padding: 30px 0 0 0;
+        }
+    
+        nav > a{
+            margin-right: 5px;
+        }
+    
+        .textos-header h1{
+            font-size: 35px;
+        }
+    
+        .textos-header h2{
+            font-size: 20px;
+        }
+    
+        /* ABOUT US */
+    
+        .imagen-about-us{
+            margin-bottom: 60px;
+            width: 99%;
+        }
+    
+        .sobre-nosotros .contenido-textos{
+            width: 95%;
+        }
+    
+        /* Galeria */
+    
+        .imagen-port{
+            width: 95%;
+        }
+    
+        /* Clients */
+    
+        .cards .card{
+            height: 450px;
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            align-items: center;
+        }
+    
+        .cards .card img{
+            width: 90px;
+            height: 90px;
+        }
+    
+        /* Footer */
+    
+        .contenedor-footer{
+            flex-direction: column;
+            border: none;
+        }
+    
+        .content-foo{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+        .content-foo h4{
+            border: none;
+        }
+    
+        .content-foo p{
+            color: #ccc;
+            border-bottom: 1px solid #f2f2f2;
+            padding-bottom: 20px;
+        }
+    
+        .titulo-final{
+            font-size: 20px;
+        }
+
+    }
