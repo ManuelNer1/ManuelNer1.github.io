@@ -10,211 +10,6 @@ body{
     font-family: 'open sans';
 }
 
-/*TITULO DE LA CARTA DE INSTRUCCIONES*/
-.title{
-    text-align: center;
-    font-size: 40px;
-    color: #6a6a6a;
-    margin-top: 100px;
-    font-weight: 100;
-
-}
-/*CARTA DE INSTRUCCIONES*/
-.container{
-    width: 100%;
-    max-width: 1200px;
-    height: 430px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    
-    
-}
-/*CARTA DE INSTRUCCIONES*/
-.container .carta{
-    width: 250px;
-    height: 330px;
-    border-radius: 8px;
-    box-shadow: 0 2px rgba(0, 0, 0, .5);
-    overflow: hidden;
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-    background-color: #BFC9CA;
-;
-}
-/*ANIMACION CARTA DE INSTRUCCIONES*/
-.container .carta:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 17px 16px rgba(0, 0, 0, .5);
-   
-}
-/*IMAGEN DE LA CARTA DE INSTRUCCIONES*/
-.container .carta img{
-    width: 180px;
-    height: 180px;
-}
-/*TITULO DE LA CARTA DE INSTRUCCIONES*/
-.container .carta h4{
-    font-weight: 600;
-}
-/*TEXTO DE LA CARTA DE INSTRUCCIONES*/
-.container .carta p{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
-}
-/*BTON */
-.btn{
-    display: block;
-    width: 150px;
-    height: 40px;
-    outline: none;
-    border: 1px solid rgb(0, 141, 235);
-    background-color: #ffffff;
-    border-radius: 6px;
-    color: rgb(0, 141, 235);
-    cursor: pointer;
-    margin: 100px auto;
-    transition: all .25s;
-    z-index: 1;
-    position: relative;
-    text-transform: uppercase;
-    margin-top: -150px;
-    margin-bottom: 280px;
-    display: block;
-    
-  
-}
-/*COLOR ´POSTERIOR DE PRECIONAR EL BOTON*/
-.btn::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(to right,rgb(23, 228, 243), rgb(0, 141, 235));
-    transition: all .25s;
-    z-index: -1;
-}
-
-.btn:hover{
-    border: 1px solid transparent;
-    color: #fff;
-}
-
-.btn:hover::before{
-    height: 100%;;
-}
-
-/*AQUI ESTAN LOS INPUTS ES DECIR LAS ENTRADA DE TEXTO DE LOS CLIENTES*/
-:root{
-    --first-color: #1a73e8;
-    --input-color: #80868b;
-    --border-color: #dadce0;
-
-    --body-font: 'open-sans'
-    --normal-font-size:1rem;
-    --small-font-size: .75rem;
-}
-
-*,::before,::after{
-    box-sizing: border-box;
-}
-
-h1{
-    margin: 0;
-}
-
-.l-form{
-    display: flex;
-    height: 100vh;
-}
-
-.form{
-    width: 360px;
-    height: 360px;
-    padding: 4rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
-    /*ALINEAL AL CENTRO*/
-    margin: auto;
-    display: block;
-
-}
-
-.form_title{
-    font-weight: 400;
-    margin-bottom: 3rem;
-}
-
-.form_div{
-    position: relative;
-    height: 48px;
-    margin-bottom: 1.5rem;
-}
-
-.form_input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: var(--normal-font-size);
-    border: 1px solid var(--border-color);
-    border-radius: .5rem;
-    outline: none;
-    padding: 1rem;
-    background: none;
-    z-index: 1;
-}
-
-.form_label{
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    padding: 0 .25rem;
-    background-color: #fff;
-    color: var(--input-color);
-    font-size: var(--normal-font-size);
-    transition: .3s;
-}
-
-.form_buttom{
-    display: block;
-    margin-left: auto;
-    padding: .75rem 2rem;
-    outline: none;
-    border: none;
-    background-color: var(--first-color);
-    color: #fff;
-    font-size: var(--normal-font-size);
-
-}
-
-.form_input:focus + .form_label{
-    top: -.5rem;
-    left: .8rem ;
-    color: var(--first-color);
-    font-size: var(--small-font-size);
-    font-weight: 500;
-    z-index: 10;
-}
-
-.form_input:not(:placeholder-shown).form_input:not(:focus)+ .form_label{
-    top: -.5rem;
-    left: .8rem;
-    font-size: var(--small-font-size);
-    font-weight: 500;
-    z-index: 10;
-}
-
-.form_input:focus{
-    border: 1.5px solid var(--first-color);
-}
-
 .map{
     margin: 20px;
     margin-left: 100px;
@@ -301,17 +96,6 @@ header .textos-header{
     width: 100%;
 }
 
-/* About us*/
-    .contenedor-sobre-nosotros{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .imagen-about-us{
-        width: 48%;
-    }
-    .sobre-nosotros .conrtenido-textos{
-        width: 48%;
-    }
 
     /* Haces que los numeros tengan una bolita*/
     .contenido-textos h3{
@@ -346,84 +130,18 @@ header .textos-header{
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
-    
-    .imagen-port{
-        width: 24%;
+
+    .imagen-port img{
+        width: 100%;
+        height: 100%;
         margin-bottom: 10px;
-        overflow: hidden;
-        position: relative;
         cursor: pointer;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     }
-    
-    .imagen-port > img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .imagen-port a{
         display: block;
     }
     
-    .hover-galeria{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        transform: scale(0);
-        background: hsla(273,91%,27%, 0.7);
-        transition: transform .5s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    .hover-galeria img{
-        width: 50px;
-    }
-    
-    .hover-galeria p{
-        color: #fff;
-    }
-
-    .imagen-port:hover .hover-galeria{
-        transform: scale(1);
-    }
-
-    /* Clientes */
-    .cards{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    .cards .card{
-        background: #4d0686;
-        display: flex;
-        width: 46%;
-        height: 200px;
-        align-items: center;
-        justify-content: space-evenly;
-        border-radius: 5px;
-        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
-    }
-    
-    .cards .card img{
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border: 3px solid #fff;
-        border-radius: 50%;
-        display: block;
-    }
-    
-    .cards .card > .contenido-texto-card{
-        width: 60%;
-        color: #fff;
-    }
-    
-    .cards .card > .contenido-texto-card p{
-        font-weight: 3000;
-        padding-top: 10px;
-    }
     
     /* footer */
     
@@ -580,7 +298,7 @@ header .textos-header{
             padding-bottom: 20px;
         }
     
-        .titulo-final{
+        .titulo-final {
             font-size: 20px;
             color: #fff;
         }

@@ -52,7 +52,7 @@ function shareMe(){
                 console.log("Document written with ID: ", docRef.id);
                 document.getElementById("pedidomamon").value="";
                 document.getElementById("cel").value="";
-                alert("RECIBIMOS SU PEDIDO");
+                alert("RECIBIMOS SU PEDIDO, EN UN MOMENTO SERA ENTREGADO");
             })
             
             .catch(function(error) {
