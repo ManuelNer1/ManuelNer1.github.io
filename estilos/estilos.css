@@ -38,6 +38,12 @@ body{
     margin-bottom: 60px;
 }
 
+.contenedor img{
+    margin-left: -80px;
+    height: 510px;
+    width: 380px;
+}
+
 
 /* Header */
 
