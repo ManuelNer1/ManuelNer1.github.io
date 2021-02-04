@@ -50,6 +50,9 @@ function shareMe(){
             
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
+                document.getElementById("pedidomamon").value="";
+                document.getElementById("cel").value="";
+                alert("RECIBIMOS SU PEDIDO");
             })
             
             .catch(function(error) {
@@ -57,6 +60,7 @@ function shareMe(){
               });
         ; 
         }
+
         function error(){
             output.innerHTML="<p>NO se pudo compartir  tu ubicacion</p>";
         }
