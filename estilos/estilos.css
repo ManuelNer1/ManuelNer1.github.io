@@ -10,9 +10,11 @@ body{
     font-family: 'open sans';
 }
 
-.map{
-    margin: 20px;
-    margin-left: 100px;
+#map {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: 340px;
 }
 
 /* Esto es para agregar un espacio entre secciones*/

@@ -4,14 +4,17 @@
     <title>Mapa con Geolocalicazion</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClJZsC-W_vHVnrqIDwIX9I12YVCNZ29pY&callback=initMap" ></script>
+	<BUtton class="btn" onclick="findMe()">Buscar mi ubicacion</BUtton>
 	<script>
+    function findMe(){
 		let map;
 		let marker;
 		let watchID;
-		let geoLoc;
+        let geoLoc;
+        initMap();
 
 		function initMap(){
-			const myLatLng = {lat: -25.363, lng: 131.044};
+			const myLatLng = {lat: 20.055805, lng: -99.342138};
 			map = new google.maps.Map(document.getElementById("map"), {
 				zoom: 15,
 				center: myLatLng,
@@ -26,7 +29,7 @@
 		function gePosition()
 		{
 			if(navigator.geolocation){
-				var options = {timeout:240000};
+				var options = {timeout:1000000};
 				geoLoc = navigator.geolocation;
 				watchID = geoLoc.watchPosition(showLocationOnMap, errorHandler, options);
 			}else{
@@ -50,7 +53,8 @@
 			}else if(err.code == 2){
 				alert("Error: Position no existe o no se encuentra");
 			}
-		}
+        }
+    }
 	</script>
 	<style type="text/css">
 			#map {

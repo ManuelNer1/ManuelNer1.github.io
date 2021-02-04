@@ -6,28 +6,55 @@ firebase.initializeApp({
   });
   var db = firebase.firestore();
   //FUNCION PARA BUSCARTE ES DECIR OCUPO EL GOOGLE MAPS
+  
   function findMe(){
-    var output = document.getElementById('map');
-    //VERIFICO SI MI CLIENTE PUEDE SOPORTAR GEOLOCALIZACION
-        if(navigator.geolocation){
-            output.innerHTML="<p>Tu navegador soporta localizacion</p>";
-        }else{
-            output.innerHTML="<p>Tu navegador NO soporta localizacion</p>";}
+        let map;
+		let marker;
+		let watchID;
+        let geoLoc;
+        initMap();
 
-// OBTENGO LA LATITUD Y LONGITUD
-function localizacion(posicion){
-        var latitude = posicion.coords.latitude;
-        var longitude = posicion.coords.longitude;
-        var imgURL="https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyDL63WEg7R98C5567DCBfGZhNm-JYKnUfU";
-        
-        output.innerHTML="<img src='"+imgURL+"'>";
-        //output.innerHTML ="<p> Latitude :"+latitude+"<br>Longitude :"+longitude+"<p>"; 
-    }
+		function initMap(){
+			const myLatLng = {lat: 20.055805, lng: -99.342138};
+			map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 15,
+				center: myLatLng,
+			});
+			marker = new google.maps.Marker({
+				position: myLatLng,map,
+				title: "Hola mundo"
+			});
+			gePosition();
+		}
 
-function error(){
-    output.innerHTML="<p>NO se pudo obtener tu ubicacion</p>";
-    }
-    navigator.geolocation.getCurrentPosition(localizacion,error);
+		function gePosition()
+		{
+			if(navigator.geolocation){
+				var options = {timeout:100000000};
+				geoLoc = navigator.geolocation;
+				watchID = geoLoc.watchPosition(showLocationOnMap, errorHandler, options);
+			}else{
+				alert("Lo sentimos, el explorador no soporta geolocalizacion");
+			}
+		}
+
+		function showLocationOnMap(position){
+			var latitud = position.coords.latitude;
+			var longitud = position.coords.longitude;
+			console.log("latitud : "+latitud+ "Longitud : "+longitud);
+
+			const myLatLng= {lat:latitud, lng:longitud};
+			marker.setPosition(myLatLng);
+			map.setCenter(myLatLng)
+		}
+
+		function errorHandler(err){
+			if(err.code == 1){
+				alert("Error: Acceso denegado!");
+			}else if(err.code == 2){
+				alert("Error: Position no existe o no se encuentra");
+			}
+        }
 } 
 
 //FUNCION PARA COMPARTIR LA UBICACION A MI BASE DE DATOS

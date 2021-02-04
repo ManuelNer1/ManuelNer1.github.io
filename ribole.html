@@ -17,7 +17,8 @@
                     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
                     <!-- GOOGLE MAPS    -->
-                <script scr="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL63WEg7R98C5567DCBfGZhNm-JYKnUfU"></script>
+                    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+                    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClJZsC-W_vHVnrqIDwIX9I12YVCNZ29pY&callback=initMap" ></script>
 </head>
 
 <body>
@@ -78,12 +79,10 @@
 
             </form>
         </div>
-
-    <BUtton class="btn" onclick="findMe()">Buscar mi ubicacion</BUtton>
-    <button class="btn" onclick="shareMe()" >confirmar pedido</button>
-    <div id="map"></div>
-
     </main>
+    <div id="map"></div>
+    <button class="btn" onclick="findMe()">Buscar mi ubicacion</button>
+    <button class="btn" onclick="shareMe()">confirmar pedido</button>
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">
@@ -98,7 +97,13 @@
         <h2 class="titulo-final">&copy; Tulopides</h2>
     </footer>
     <script>var empresa = "Ribole";</script>
-    <script src='app.js'>
-    </script>
+    <script src='app.js'></script>
+    <style type="text/css">
+        #map {
+        width: 300px;
+        height: 300px;
+        margin-right: auto;
+    }
+</style>
 </body>
 </html>
